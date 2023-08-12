@@ -1,0 +1,48 @@
+class Particle:
+    def __init__(self):
+        self.particles = []
+    def emit(self): # Moves and draws particles
+        if self.particles:
+            self.remove_particles()
+            for particle in self.particles:
+                particle[0][1] += particle[2][1]
+                particle[0][0] += particle[2][0]
+                particle[1] -= 0.3
+                pygame.draw.circle(WINDOW, (255,255,255), particle[0],int(particle[1]))
+
+
+    def add_particles(self): #Adds particles
+        pos_x = 400
+        pos_y = 300
+        direction_x = random.randint(-5,5)
+        direction_y = random.randint(-4,4)
+
+
+        particle_circle = [[pos_x, pos_y], 15, [direction_x, direction_y]]
+        self.particles.append(particle_circle)
+
+
+
+
+    def remove_particles(self): #Removes particles*
+        particle_copy = [particle for particle in self.particles if particle[1] > 0]
+        self.particles = particle_copy
+
+
+particle = Particle()
+
+PARTICLE_EVENT = pygame.USEREVENT + 1
+pygame.time.set_timer(PARTICLE_EVENT, 1)
+
+################ To call Particle Event ################ 
+
+if event.type == PARTICLE_EVENT:
+            particle.add_particles()
+
+Use particle.emit() as you would display an image
+
+For Example:
+	Window.blit(background, (0,0)
+	Window.blit(player, player_rect)
+	particle.emit()
+
