@@ -1,6 +1,5 @@
 # Particle-Editor
 Tool for creating particles/effects in pygame (With Guide)
-Executable can be fount at: https://frogtesseract.itch.io/particle-editor
 
 ## Guide
 ### Creating Particles
