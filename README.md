@@ -27,7 +27,7 @@ In the game loop you will need to call particle.emit() (Similar to displaying im
 An example of particle.txt can be found in the repo (example.txt) with the additional code to call the functions.
 
 ### Executable
-An executable version of the game can be found at: 
+An executable version of the tool can be found at: 
 
 ### Cool Examples
 
