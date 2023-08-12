@@ -1,4 +1,4 @@
 # Particle-Editor
-Tool for creating particles/effects in pygame (Documentation Included)
+Tool for creating particles/effects in pygame (With Guide)
 
-Adding documentation tommorow
+
